@@ -1,0 +1,1 @@
+var question = prompt("Say something!");
