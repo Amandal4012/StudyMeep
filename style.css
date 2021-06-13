@@ -4,5 +4,28 @@ font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .center {
- text-align: center
+ text-align: center;
+}
+
+.mid {
+  text-align:center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table th {
+    text-align: left;
+    background-color: #856e8a;
+    color: #FFF;
+    padding: 4px 30px 4px 8px;
+}
+
+table td {
+    border: 1px solid #e3e3e3;
+    padding: 4px 8px;
+}
+
+table tr:nth-child(odd) td {
+    background-color: #f4d9fa;
 }
