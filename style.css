@@ -2,3 +2,7 @@
 .text{
 font-family: 'PT Sans Narrow', sans-serif;
 }
+
+.center {
+ text-align: center
+}
