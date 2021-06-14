@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Study Meep</title>
@@ -13,8 +16,6 @@
   </head>
 
   <body>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/8.6.7/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -26,14 +27,29 @@
     <h1 class= "center"> Study Meep</h1>
     <p class="center"> for your studying needs.</p>
 
-    Notes
-    <ul>
-      <li> Math problem</li>
-      <li> English pgr</li>
-      <li> Econ sentences</li>
-    </ul>
+    <!--Notes-->
+    <!--<ul>-->
+    <!--  <li> Math problem</li>-->
+    <!--  <li> English pgr</li>-->
+    <!--  <li> Econ sentences</li>-->
+    <!--</ul>-->
+  <!--<input type='text' id='cellOne' />-->
+  <!--<input type='text' id='cellTwo' />-->
+  <!--<input type='text' id='cellThree' />-->
+  <!--<input type='text' id='cellFour' />-->
+<div>
+<form id="add-new-task">
+  <input type="text" name="task" placeholder="Task">
+  <input type="text" name="notes" placeholder="Notes">
+  <input type="text" name="due" placeholder="Due Date">
+  <input type="text" name="urgency" placeholder="Urgency">
 
-    <table style="margin-left: auto; margin-right: auto">
+</form>
+<ul id="task-list"></ul>
+</div>
+  <!--<button onclick="addTask()" class="mid">add new task</button>-->
+
+    <table id="myTasks" style="margin-left: auto; margin-right: auto">
       <tr>
         <th>Task</th>
         <th>Notes</th>
@@ -66,7 +82,34 @@
         <td><img src="https://img.icons8.com/metro/26/000000/trash.png"/></td>
       </tr>
 
+      <tr>
+        <td contenteditable='true'></td>
+        <td contenteditable='true'></td>
+        <td contenteditable='true'></td>
+        <td contenteditable='true'></td>
+        <td><img src="https://img.icons8.com/metro/26/000000/trash.png"/></td>
+      </tr>
+
     </table>
+
+    <script>
+      //init firebase
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCs3N4cn5Z_63ZCFUPT4CrDm_oLG3e47o0",
+        authDomain: "studymeep.firebaseapp.com",
+        databaseURL: "https://studymeep-default-rtdb.firebaseio.com",
+        projectId: "studymeep",
+        storageBucket: "studymeep.appspot.com",
+        messagingSenderId: "461281970000",
+        appId: "1:461281970000:web:8b99d52769f4811f340e55",
+        measurementId: "G-EM3H2ZB304"
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true});
+    </script>
+    <script src="StudyMeep.js"></script>
 
   </body>
 </html>
