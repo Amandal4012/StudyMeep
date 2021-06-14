@@ -3,6 +3,10 @@
 font-family: 'PT Sans Narrow', sans-serif;
 }
 
+svg:hover {
+  fill: red;
+}
+
 .center {
  text-align: center;
 }
