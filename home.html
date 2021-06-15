@@ -40,14 +40,14 @@
   <input type="text" name="urgency" placeholder="Urgency">
 
 
-<button id="add-new-task">add new task</button>
+<input type= "button" onclick="addRow()" value="add new task">
 </form>
 <ul id="task-list"></ul>
 </div>
 
   <!--<button onclick="createTask()" class="mid">add new task</button>-->
-
-    <table id="myTasks" style="margin-left: auto; margin-right: auto">
+    <table style="margin-left: auto; margin-right: auto">
+    <!--<table id="myTasks" style="margin-left: auto; margin-right: auto">-->
       <tr>
         <th>Task</th>
         <th>Notes</th>
@@ -55,7 +55,9 @@
         <th>Urgency</th>
         <th>Done?</th>
       </tr>
+    </table>
 
+    <table id="myTasks" style="margin-left: auto; margin-right: auto">
       <tr>
         <td>Math</td>
         <td>DeltaMath</td>
