@@ -33,3 +33,11 @@ table td {
 table tr:nth-child(odd) td {
     background-color: #f4d9fa;
 }
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
